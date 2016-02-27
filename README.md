@@ -35,7 +35,7 @@ Throug cask:
     brew cask install slack
     brew cask install utorrent
     
-    # Shareware 
+    # shareware 
     brew cask install alfred
     brew cask install teamviewer
     brew cask install tramsmit
