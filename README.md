@@ -13,8 +13,15 @@ https://www.iterm2.com/
 
 Homebrew:
 
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    
+Test homebrew configuration and fix:
+    
+    brew doctor
 
+Now time to Cask package:
+
+    brew install cask
 
 ## Software (app/cask)
 
