@@ -25,7 +25,7 @@ Now time to Cask package:
 
 ## Software (app/cask)
 
-Throug cask: 
+Through cask: 
 
     # free software
     brew cask install google-chrome
