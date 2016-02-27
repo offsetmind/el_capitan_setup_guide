@@ -46,7 +46,6 @@ Apps from web:
 flux.app: https://justgetflux.com/
 
 alternote: https://itunes.apple.com/app/id974971992?mt=12
-Better version of evernote client. Recomend!
     
 ## Terminal
 
