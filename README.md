@@ -40,6 +40,10 @@ Throug cask:
     brew cask install teamviewer
     brew cask install tramsmit
     brew cask install keepassx
+    
+    # games 
+    brew cask install battle-net
+    brew cask install steam
 
 Apps from web:
 
