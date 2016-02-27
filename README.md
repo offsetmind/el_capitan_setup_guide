@@ -4,7 +4,22 @@ This is my personal setup guide for a fresh install of Mac OS X: El Capitan. It'
 
 Enjoy it! 
 
-1. Software
-2. Terminal
-3. Coding
-4. Configurations 
+## Preparing
+
+First install iterm2 and homebrew.
+
+iTerm: 
+https://www.iterm2.com/
+
+Homebrew:
+
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+
+## Software (app/cask)
+
+## Terminal
+
+## Coding
+
+## Configurations 
