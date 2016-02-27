@@ -25,6 +25,29 @@ Now time to Cask package:
 
 ## Software (app/cask)
 
+Throug cask: 
+
+    # free software
+    brew cask install google-chrome
+    brew cask install google-drive
+    brew cask install firefox
+    brew cask install skype
+    brew cask install slack
+    brew cask install utorrent
+    
+    # Shareware 
+    brew cask install alfred
+    brew cask install teamviewer
+    brew cask install tramsmit
+    brew cask install keepassx
+
+Apps from web:
+
+flux.app: https://justgetflux.com/
+
+alternote: https://itunes.apple.com/app/id974971992?mt=12
+Better version of evernote client. Recomend!
+    
 ## Terminal
 
 ## Coding
