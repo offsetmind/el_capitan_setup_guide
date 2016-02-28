@@ -116,5 +116,8 @@ Test:
     lsof -Pni4 | grep LISTEN | grep php
 ## Configurations 
 
+Add aliases: 
+
+    echo "$(curl -fsSL https://raw.githubusercontent.com/ncuxomozg/el_capitan_setup_guide/master/includes/aliases.conf)" >> ~/.zshrc
 
 Guide updating constantly.
