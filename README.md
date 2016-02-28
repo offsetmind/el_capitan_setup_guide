@@ -6,7 +6,7 @@ Enjoy it!
 
 ## Preparing
 
-First install iterm2 and homebrew.
+First installing iterm2 and homebrew.
 
 iTerm: 
 https://www.iterm2.com/
@@ -94,6 +94,5 @@ Edit `nginx.conf`:
     brew tap josegonzalez/homebrew-php
     brew install --without-apache --with-fpm --with-mysql php55
     
-
 
 ## Configurations 
