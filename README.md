@@ -97,8 +97,7 @@ Edit `nginx.conf`:
 Autostart setup:
    
     mkdir -p ~/Library/LaunchAgents
-    cp /usr/local/Cellar/php55/5.5.9/homebrew-php.josegonzalez.php55.plist ~/Library/LaunchAgents/
-    # laod
-    launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist 
+    cp /usr/local/opt/php55/homebrew.mxcl.php55.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist
 
 ## Configurations 
