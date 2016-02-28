@@ -93,6 +93,12 @@ Edit `nginx.conf`:
     brew tap homebrew/dupes
     brew tap josegonzalez/homebrew-php
     brew install --without-apache --with-fpm --with-mysql php55
-    
+
+Autostart setup:
+   
+    mkdir -p ~/Library/LaunchAgents
+    cp /usr/local/Cellar/php55/5.5.9/homebrew-php.josegonzalez.php55.plist ~/Library/LaunchAgents/
+    # laod
+    launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php55.plist 
 
 ## Configurations 
