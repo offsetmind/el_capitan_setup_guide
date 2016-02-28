@@ -88,4 +88,12 @@ Edit `nginx.conf`:
        include conf.d/*.conf;
     }
 
+### PHP-FPM
+
+    brew tap homebrew/dupes
+    brew tap josegonzalez/homebrew-php
+    brew install --without-apache --with-fpm --with-mysql php55
+    
+
+
 ## Configurations 
