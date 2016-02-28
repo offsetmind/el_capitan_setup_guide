@@ -68,10 +68,17 @@ Oh My ZSH:
    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     
 ### Mysql
-   
-   
+
+v. 5.7.+
+
     brew install mysql
-   
+
+v. 5.6.+
+
+    brew install homebrew/versions/mysql56
+  
+Config:
+
     unset TMPDIR
 
     mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
