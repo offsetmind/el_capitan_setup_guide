@@ -100,4 +100,7 @@ Autostart setup:
     cp /usr/local/opt/php55/homebrew.mxcl.php55.plist ~/Library/LaunchAgents/
     launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist
 
+Test: 
+
+    lsof -Pni4 | grep LISTEN | grep php
 ## Configurations 
