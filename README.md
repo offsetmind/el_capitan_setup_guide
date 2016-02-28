@@ -127,6 +127,7 @@ Test:
 ### Perlbrew
 
     \curl -L http://install.perlbrew.pl | bash
+    perlbrew init
     
 
 ## Configurations 
