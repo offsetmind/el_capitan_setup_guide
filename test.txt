@@ -1,1 +1,0 @@
-ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
