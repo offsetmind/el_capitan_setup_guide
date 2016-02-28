@@ -59,6 +59,14 @@ First install service controller for brew:
 
     brew tap homebrew/services
     
+Utils:
+
+    brew install mc
+  
+Oh My ZSH: 
+   
+   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    
 ### Mysql
    
    
@@ -107,3 +115,6 @@ Test:
 
     lsof -Pni4 | grep LISTEN | grep php
 ## Configurations 
+
+
+Guide updating constantly.
