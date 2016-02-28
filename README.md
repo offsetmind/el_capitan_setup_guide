@@ -123,6 +123,12 @@ Autostart setup:
 Test: 
 
     lsof -Pni4 | grep LISTEN | grep php
+    
+### Perlbrew
+
+    \curl -L http://install.perlbrew.pl | bash
+    
+
 ## Configurations 
 
 Add aliases: 
