@@ -37,6 +37,7 @@ Through cask:
     brew cask install utorrent
     brew cask install virtualbox
     brew cask install vagrant
+    brew cask install sequel-pro
     
     # shareware 
     brew cask install alfred
