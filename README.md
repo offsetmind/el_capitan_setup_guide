@@ -1,6 +1,6 @@
 #El Capitan setup guide
 
-This is my personal setup guide for a fresh install of Mac OS X: El Capitan. It's a bunch of software and apps what I am using everyday. It's useful for me, and maybe, for anyone else.
+This is my personal setup guide for a fresh new install of Mac OS X: El Capitan. It's a bunch of software and apps what I am using everyday. It's useful for me, and maybe for anyone else.
 
 Enjoy it! 
 
