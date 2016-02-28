@@ -67,7 +67,9 @@ First install service controller for brew:
 
     mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
     
-    mysql.server start
+    cp /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+    
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
     
 Change root password (optional):
    
