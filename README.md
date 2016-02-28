@@ -138,7 +138,9 @@ Test:
     
     # change current perl
     perlbrew switch 5.2x.xx
-    
+ 
+
+IMPORTANT:  File::Util has a fatal bug in perl version 5.23+   
 
 ## Configurations 
 
