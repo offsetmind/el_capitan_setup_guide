@@ -67,6 +67,10 @@ First install service controller for brew:
     
     mysql.server start
     
+Change root password (optional):
+   
+    mysqladmin -u root -p oldpassword newpass
+    
 ### NGINX
 
     brew install nginx
