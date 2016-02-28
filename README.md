@@ -140,7 +140,10 @@ Test:
     perlbrew switch 5.2x.xx
  
 
-IMPORTANT:  File::Util has a fatal bug in perl version 5.23+   
+*IMPORTANT*:  File::Util has a fatal bug in perl version 5.23+
+
+https://rt.cpan.org/Public/Bug/Display.html?id=106771
+
 
 ## Configurations 
 
