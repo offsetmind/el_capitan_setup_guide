@@ -35,6 +35,8 @@ Through cask:
     brew cask install skype
     brew cask install slack
     brew cask install utorrent
+    brew cask install virtualbox
+    brew cask install vagrant
     
     # shareware 
     brew cask install alfred
