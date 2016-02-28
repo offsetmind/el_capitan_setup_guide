@@ -17,6 +17,7 @@ Homebrew:
     
 Test homebrew configuration and fix:
     
+    brew update
     brew doctor
 
 Now time to Cask package:
@@ -47,8 +48,15 @@ flux.app: https://justgetflux.com/
 
 alternote: https://itunes.apple.com/app/id974971992?mt=12
     
-## Terminal
-
 ## Coding
+
+First install service controller for brew:
+
+    brew tap homebrew/services
+    
+Other stuff:
+   
+   
+   brew install mc mysql nginx redis
 
 ## Configurations 
