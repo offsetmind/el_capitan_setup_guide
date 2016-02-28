@@ -72,20 +72,19 @@ Oh My ZSH:
 v. 5.7.+
 
     brew install mysql
+    unset TMPDIR
+    mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+    cp /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 v. 5.6.+
 
     brew install homebrew/versions/mysql56
-  
-Config:
-
     unset TMPDIR
-
-    mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
-    
+    mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql56)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
     cp /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
-    
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql56.plist
+  
     
 Change root password (optional):
    
