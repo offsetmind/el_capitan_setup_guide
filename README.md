@@ -129,10 +129,13 @@ Test:
     \curl -L http://install.perlbrew.pl | bash
     
     perlbrew init
+    
     # get list of all available versions
     perlbrew available
+    
     # install latest
     perlbrew install 5.2x.xx
+    
     # change current perl
     perlbrew switch 5.2x.xx
     
