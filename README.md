@@ -1,4 +1,4 @@
-#El Capitan setup flow
+#El Capitan setup guide
 
 This is my personal setup guide for a fresh install of Mac OS X: El Capitan. It's a bunch of software and apps what I am using everyday. It's useful for me, and maybe, for anyone else.
 
@@ -71,5 +71,15 @@ First install service controller for brew:
 
     brew install nginx
 
+Add config folder: 
+
+    mkdir /usr/local/etc/nginx/conf.d/
+    
+Edit `nginx.conf`:
+
+    http {
+       ...
+       include conf.d/*.conf;
+    }
 
 ## Configurations 
