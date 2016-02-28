@@ -47,6 +47,8 @@ Apps from web:
 flux.app: https://justgetflux.com/
 
 alternote: https://itunes.apple.com/app/id974971992?mt=12
+
+telegram: https://itunes.apple.com/ru/app/telegram/id747648890
     
 ## Coding
 
