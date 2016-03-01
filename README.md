@@ -38,6 +38,7 @@ Through cask:
     brew cask install virtualbox
     brew cask install vagrant
     brew cask install sequel-pro
+    brew cask install livereload
     
     # shareware 
     brew cask install alfred
