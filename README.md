@@ -89,7 +89,7 @@ v. 5.6.+
     
 Change root password (optional):
    
-    mysqladmin -u root -p oldpassword newpass
+    mysqladmin -u root -p password "new_password"
     
 ### NGINX
 
