@@ -63,6 +63,8 @@ First install service controller for brew:
 Utils:
 
     brew install mc
+    brew install htop
+    brew install phantomjs
   
 Oh My ZSH: 
    
