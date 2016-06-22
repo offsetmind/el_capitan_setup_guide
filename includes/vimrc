@@ -78,8 +78,8 @@ let g:tagbar_type_php = {
 	\]
 \}
 
-nmap <C-x> :TagbarToggle<CR>
-nmap <C-n> :NERDTreeTabsToggle<CR>
+nmap <S-x> :TagbarToggle<CR>
+nmap <S-m> :NERDTreeTabsToggle<CR>
 nmap <S-t> :tabn<CR>
 
 
