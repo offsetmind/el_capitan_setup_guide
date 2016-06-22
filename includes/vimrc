@@ -19,10 +19,15 @@ Plugin 'c9s/perlomni.vim'
 Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'sirver/ultisnips'
 Plugin 'valloric/youcompleteme'
 Bundle  'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
 
 " colors
 Plugin 'damage220/solas.vim'
@@ -73,5 +78,24 @@ let g:tagbar_type_php = {
 	\]
 \}
 
-nmap <C-m> :TagbarToggle<CR>
+nmap <C-x> :TagbarToggle<CR>
 nmap <C-n> :NERDTreeTabsToggle<CR>
+nmap <S-t> :tabn<CR>
+
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+
+""""""""""""""""""""""""""""""""""""""""""
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+""""""""""""""""""""""""""""""""""""""""""
