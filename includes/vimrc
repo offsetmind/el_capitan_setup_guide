@@ -1,0 +1,77 @@
+set mouse=a
+set number
+syntax on
+
+filetype on
+filetype plugin on
+filetype indent on
+
+set nocompatible
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+" ==== plugin here ====
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'c9s/perlomni.vim'
+Plugin 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'sirver/ultisnips'
+Plugin 'valloric/youcompleteme'
+Bundle  'majutsushi/tagbar'
+Plugin 'scrooloose/nerdcommenter'
+
+" colors
+Plugin 'damage220/solas.vim'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'mhartington/oceanic-next'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" other configuration
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+set autoindent
+set smartindent
+
+set laststatus=2
+
+set encoding=utf-8
+set termencoding=utf-8
+
+set splitbelow
+set splitright
+
+set incsearch
+set cursorline
+
+set pumheight=10
+
+set background=dark
+colorscheme solas
+
+" tagbar config
+let g:tagbar_sort = 0
+
+let g:tagbar_iconchars = ['+', '-']
+
+
+let g:tagbar_type_php = {
+	\'ctagstype': 'php',
+	\'kinds': [
+		\'i:interfaces',
+		\'c:classes',
+		\'d:constants',
+		\'f:functions'
+	\]
+\}
+
+nmap <C-m> :TagbarToggle<CR>
+nmap <C-n> :NERDTreeTabsToggle<CR>
