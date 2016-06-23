@@ -20,7 +20,7 @@ Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'valloric/youcompleteme'
-Bundle  'majutsushi/tagbar'
+Bundle 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 
 " Track the engine.
@@ -28,6 +28,10 @@ Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
+
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " colors
 Plugin 'damage220/solas.vim'
@@ -80,7 +84,8 @@ let g:tagbar_type_php = {
 
 nmap <S-x> :TagbarToggle<CR>
 nmap <S-m> :NERDTreeTabsToggle<CR>
-nmap <S-t> :tabn<CR>
+nmap <F1> :tabp<CR>
+nmap <F2> :tabn<CR>
 
 
 " Trigger configuration. Do not use <tab> if you use
@@ -99,3 +104,38 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 """"""""""""""""""""""""""""""""""""""""""
+
+let g:NERDSpaceDelims = 1
+
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+set guifont=/Users/mozg/.vim/fonts
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+line symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
