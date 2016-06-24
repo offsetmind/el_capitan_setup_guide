@@ -23,6 +23,7 @@ Plugin 'valloric/youcompleteme'
 Bundle 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bubujka/emmet-vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
