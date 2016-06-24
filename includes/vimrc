@@ -22,6 +22,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'valloric/youcompleteme'
 Bundle 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'bubujka/emmet-vim'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -29,6 +30,11 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
+" syntax
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/html5.vim'
+
+Plugin 'mtscout6/vim-tagbar-css'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -104,6 +110,21 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" UltiSnips - expand on enter
+let g:UltiSnipsExpandTrigger = "<nop>"
+let g:ulti_expand_or_jump_res = 0
+function ExpandSnippetOrCarriageReturn()
+   let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+        return snippet
+    else
+        return "\<CR>"
+    endif
+endfunction
+
+inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
+
+" emment - expand on tab
 
 """"""""""""""""""""""""""""""""""""""""""
 map <C-j> <C-W>j
@@ -123,6 +144,10 @@ endif
 
 " set guifont=/Users/mozg/.vim/fonts
 set guifont=Roboto_Mono_for_Powerline:h10 
+
+" emmet keybindings
+let g:user_emmet_expandabbr_key = '<Tab>'
+let g:use_emmet_complete_tag = 1
 
 " unicode symbols
 let g:airline_left_sep = '»'
