@@ -37,6 +37,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'damage220/solas.vim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'mhartington/oceanic-next'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -64,7 +65,13 @@ set cursorline
 set pumheight=10
 
 set background=dark
-colorscheme solas
+" solarized options 
+" let g:solarized_visibility = "high"
+" let g:solarized_contrast = "high"
+" colorscheme solarized
+
+set background=dark
+colorscheme solarized
 
 " tagbar config
 let g:tagbar_sort = 0
@@ -107,7 +114,6 @@ map <C-l> <C-W>l
 
 let g:NERDSpaceDelims = 1
 
-
 " air-line
 let g:airline_powerline_fonts = 1
 
@@ -115,7 +121,8 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-set guifont=/Users/mozg/.vim/fonts
+" set guifont=/Users/mozg/.vim/fonts
+set guifont=Roboto_Mono_for_Powerline:h10 
 
 " unicode symbols
 let g:airline_left_sep = '»'
