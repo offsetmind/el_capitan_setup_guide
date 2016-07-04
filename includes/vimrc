@@ -6,6 +6,9 @@ filetype on
 filetype plugin on
 filetype indent on
 
+set ttyfast
+set lazyredraw
+
 set nocompatible
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -16,6 +19,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'c9s/perlomni.vim'
+Plugin 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -172,3 +176,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+" template toolkit syntax highlight with emmet
+autocmd BufNewFile,BufRead *.tt setf html
