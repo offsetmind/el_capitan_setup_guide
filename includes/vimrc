@@ -23,10 +23,15 @@ Plugin 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highl
 Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'ctrlpvim/ctrlp.vim'
+
+" clang required
 Plugin 'valloric/youcompleteme'
 Bundle 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bubujka/emmet-vim'
+
+" ACK required (ubuntu: ack-grep) 
+Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-multiple-cursors'
 
 " Track the engine.
@@ -105,6 +110,7 @@ nmap <S-m> :NERDTreeTabsToggle<CR>
 nmap <F1> :tabp<CR>
 nmap <F2> :tabn<CR>
 
+nnoremap <F12> :Ack 
 
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
