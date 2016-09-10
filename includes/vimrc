@@ -1,5 +1,6 @@
 set mouse=a
 set number
+set relativenumber
 syntax on
 
 filetype on
@@ -9,7 +10,19 @@ filetype indent on
 set ttyfast
 set lazyredraw
 
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan
+
+set guioptions-=L
+
 set nocompatible
+
+" test
+set ttimeout
+set ttimeoutlen=250
+set notimeout
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -18,6 +31,7 @@ call vundle#begin()
 " ==== plugin here ====
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'jlanzarotta/bufexplorer' 
 Plugin 'c9s/perlomni.vim'
 Plugin 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 Plugin 'scrooloose/nerdtree'
@@ -107,6 +121,8 @@ let g:tagbar_type_php = {
 
 nmap <S-x> :TagbarToggle<CR>
 nmap <S-m> :NERDTreeTabsToggle<CR>
+" nmap <S-m> :Ex<CR>
+nmap <S-b> :BufExplorer<CR>
 nmap <F1> :tabp<CR>
 nmap <F2> :tabn<CR>
 
@@ -154,7 +170,7 @@ if !exists('g:airline_symbols')
 endif
 
 " set guifont=/Users/mozg/.vim/fonts
-set guifont=Roboto_Mono_for_Powerline:h10 
+set guifont=Roboto_Mono_for_Powerline:h14 
 
 " emmet keybindings
 let g:user_emmet_expandabbr_key = '<Tab>'
@@ -194,3 +210,7 @@ set tabstop=4
 set shiftwidth=4
  " On pressing tab, insert 4 spaces
 set expandtab
+
+if has('mouse_sgr')
+    set ttymouse=sgr
+endif
