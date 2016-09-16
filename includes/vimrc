@@ -31,6 +31,7 @@ call vundle#begin()
 " ==== plugin here ====
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-surround'
 Plugin 'jlanzarotta/bufexplorer' 
 Plugin 'c9s/perlomni.vim'
 Plugin 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
