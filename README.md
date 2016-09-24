@@ -154,4 +154,9 @@ Appends aliases and some config strings to `.zshrc`:
 
     echo "$(curl -fsSL https://raw.githubusercontent.com/ncuxomozg/el_capitan_setup_guide/master/includes/aliases.conf)" >> ~/.zshrc
 
+### tmux
+
+    tmux source-file ~/.tmux.conf
+   
+
 Guide updating constantly.
