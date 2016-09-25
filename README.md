@@ -2,8 +2,6 @@
 
 This is my personal setup guide for a fresh new install of Mac OS X: El Capitan. It's a bunch of software and apps what I use everyday. It's useful for me, and maybe for anyone else.
 
-Use it, if you find this useful!
-
 ## Preparing
 
 First installing iterm2 and homebrew.
