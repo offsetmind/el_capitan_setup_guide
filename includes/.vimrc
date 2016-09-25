@@ -31,6 +31,8 @@ call vundle#begin()
 " ==== plugin here ====
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'benmills/vimux'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'jlanzarotta/bufexplorer' 
 Plugin 'c9s/perlomni.vim'
@@ -40,7 +42,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " clang required
-Plugin 'valloric/youcompleteme'
+" Plugin 'valloric/youcompleteme'
 Bundle 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bubujka/emmet-vim'
