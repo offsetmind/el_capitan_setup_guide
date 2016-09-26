@@ -45,7 +45,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'valloric/youcompleteme'
 Bundle 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'bubujka/emmet-vim'
+" Plugin 'bubujka/emmet-vim'
 
 " ACK required (ubuntu: ack-grep) 
 Plugin 'mileszs/ack.vim'
