@@ -45,7 +45,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'valloric/youcompleteme'
 Bundle 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'bubujka/emmet-vim'
+Plugin 'mattn/emmet-vim'
 
 " ACK required (ubuntu: ack-grep) 
 Plugin 'mileszs/ack.vim'
@@ -176,7 +176,8 @@ endif
 set guifont=Roboto_Mono_for_Powerline:h14 
 
 " emmet keybindings
-let g:user_emmet_expandabbr_key = '<Tab>'
+" let g:user_emmet_expandabbr_key = '<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:use_emmet_complete_tag = 1
 
 " unicode symbols
