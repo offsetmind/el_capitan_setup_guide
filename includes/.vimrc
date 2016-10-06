@@ -224,7 +224,7 @@ endif
 
 " Perl Tidy
 " define :Tidy command to run perltidy on visual selection || entire buffer"
-command -range=% -nargs=* Tidy <line1>,<line2>! /home/pavelerofeev/Perl-Tidy/perltidy
+command -range=% -nargs=* Tidy <line1>,<line2>! /path/to/Perl-Tidy/perltidy
 
 "run :Tidy on entire buffer and return cursor to (approximate) original position"
 fun DoTidy()
