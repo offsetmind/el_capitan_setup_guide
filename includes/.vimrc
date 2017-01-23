@@ -222,20 +222,3 @@ if has('mouse_sgr')
     set ttymouse=sgr
 endif
 
-" Perl Tidy
-" define :Tidy command to run perltidy on visual selection || entire buffer"
-command -range=% -nargs=* Tidy <line1>,<line2>! $PERLTIDY_PATH
-
-"run :Tidy on entire buffer and return cursor to (approximate) original position"
-fun DoTidy()
-    let l = line(".")
-    let c = col(".")
-    :Tidy
-    call cursor(l, c)
-endfun
-
-" shortcut for normal mode to run on entire buffer then return to current line"
-au Filetype perl nmap <C-p> :call DoTidy()<CR>
-
-" shortcut for visual mode to run on the the current visual selection"
-au Filetype perl vmap <C-p> :Tidy<CR>
