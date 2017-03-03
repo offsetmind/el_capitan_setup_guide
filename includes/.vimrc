@@ -229,7 +229,7 @@ menu Encoding.cp866 :e ++enc=cp866 ++ff=dos<CR>
 menu Encoding.utf-8 :e ++enc=utf8<CR>
 menu Encoding.koi8-u :e ++enc=koi8-u ++ff=unix<CR>
 
-nmap <F6> :emenu Encoding.utf-8<CR>
-nmap <F7> :emenu Encoding.windows-1251<CR>
+nmap <F3> :emenu Encoding.utf-8<CR>
+nmap <F4> :emenu Encoding.windows-1251<CR>
 
 map <F8> :emenu Encoding.
