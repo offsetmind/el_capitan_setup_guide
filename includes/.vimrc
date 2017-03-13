@@ -1,3 +1,8 @@
+" ================================= "
+" Created by: ncuxomozg             "
+" Contact   : octopus@mozgcorp.ru   "
+" ================================= "
+
 set mouse=a
 set number
 set relativenumber
