@@ -252,7 +252,7 @@ function ChangeEncoding()
     for [ pattern, encoding_name ] in items( re_patterns )
         let match = matchstr( current_dir, pattern )
         if match != ''
-            execute 'e ++enc=' . encoding_name . ' ++ff=dos %:p'
+            execute 'e ++enc=' . encoding_name . ' %:p'
             " fix: reenable syntax after encoding
             syntax enable
         endif
