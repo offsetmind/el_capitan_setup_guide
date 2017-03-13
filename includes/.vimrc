@@ -246,7 +246,7 @@ function ChangeEncoding()
     " dictionary: { regexp: encoding }
     let re_patterns = {
         \ 'some\.project\.name': "cp1251",
-	\ 'another\.project\.regexpt': "cp1251",
+	\ 'another\.project\.regexp': "cp1251",
         \ }
 
     for [ pattern, encoding_name ] in items( re_patterns )
