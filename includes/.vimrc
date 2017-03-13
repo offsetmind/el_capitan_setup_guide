@@ -233,3 +233,24 @@ nmap <F3> :emenu Encoding.utf-8<CR>
 nmap <F4> :emenu Encoding.windows-1251<CR>
 
 map <F8> :emenu Encoding.
+
+" encoding by dir 
+function ChangeEncoding()
+    let current_dir = expand("%:p:h")
+
+    " dictionary: { regexp: encoding }
+    let re_patterns = {
+        \ 'some\.project\.name': "cp1251",
+	\ 'another\.project\.regexpt': "cp1251",
+        \ }
+
+    for [ pattern, encoding_name ] in items( re_patterns )
+        let match = matchstr( current_dir, 'money\.mail\.ru')
+        if match != ''
+            execute 'e ++enc=cp1251 ++ff=dos %:p'
+            " fix: reenable syntax after encoding
+            syntax enable
+        endif
+    endfor
+
+endfunction
