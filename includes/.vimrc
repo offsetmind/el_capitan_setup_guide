@@ -234,7 +234,7 @@ nmap <F4> :emenu Encoding.windows-1251<CR>
 
 map <F8> :emenu Encoding.
 
-" encoding by dir 
+"--- encoding by dir 
 function ChangeEncoding()
     let current_dir = expand("%:p:h")
 
@@ -254,3 +254,6 @@ function ChangeEncoding()
     endfor
 
 endfunction
+
+autocmd BufNewFile,BufReadPost * call ChangeEncoding()
+"---
