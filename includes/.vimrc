@@ -262,3 +262,9 @@ endfunction
 
 autocmd BufNewFile,BufReadPost * call ChangeEncoding()
 "---
+
+" syntax hightlighting perfomance
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+syntax sync minlines=256
