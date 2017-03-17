@@ -127,7 +127,7 @@ let g:tagbar_type_php = {
 	\]
 \}
 
-nmap <S-x> :TagbarToggle<CR>
+nmap <S-x> :TagbarOpenAutoClose<CR>
 nmap <S-m> :NERDTreeTabsToggle<CR>
 " nmap <S-m> :Ex<CR>
 nmap <S-b> :BufExplorer<CR>
