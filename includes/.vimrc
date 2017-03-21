@@ -36,6 +36,7 @@ call vundle#begin()
 " ==== plugin here ====
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'fatih/vim-go'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -110,6 +111,14 @@ set background=dark
 
 set background=dark
 colorscheme solarized
+
+" golang configuration
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " tagbar config
 let g:tagbar_sort = 0
