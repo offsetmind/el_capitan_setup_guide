@@ -5,7 +5,8 @@
 
 set mouse=a
 set number
-set relativenumber
+
+" set relativenumber
 syntax on
 
 filetype on
@@ -18,6 +19,10 @@ set lazyredraw
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
+
+" vim speed fix
+set synmaxcol=200
+
 highlight lCursor guifg=NONE guibg=Cyan
 
 set guioptions-=L
@@ -36,6 +41,10 @@ call vundle#begin()
 " ==== plugin here ====
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'qpkorr/vim-bufkill'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+Plugin 'chriskempson/base16-vim'
 Plugin 'fatih/vim-go'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive'
@@ -45,7 +54,7 @@ Plugin 'c9s/perlomni.vim'
 Plugin 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
 
 " clang required
 " Plugin 'valloric/youcompleteme'
@@ -69,14 +78,18 @@ Plugin 'othree/html5.vim'
 
 Plugin 'mtscout6/vim-tagbar-css'
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+"
+Plugin 'itchyny/lightline.vim'
+
 
 " colors
 Plugin 'damage220/solas.vim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'mhartington/oceanic-next'
 Plugin 'altercation/vim-colors-solarized'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -85,10 +98,10 @@ filetype plugin indent on    " required
 
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
 
-set autoindent
+set smarttab
 set smartindent
+set expandtab
 
 set laststatus=2
 
@@ -223,14 +236,7 @@ let g:airline_symbols.linenr = ''
 " template toolkit syntax highlight with emmet
 autocmd BufNewFile,BufRead *.tt setf html
 
-
 filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
- " On pressing tab, insert 4 spaces
-set expandtab
 
 if has('mouse_sgr')
     set ttymouse=sgr
@@ -248,20 +254,37 @@ nmap <F4> :emenu Encoding.windows-1251<CR>
 
 map <F8> :emenu Encoding.
 
-"--- encoding by dir 
+" Conway plugins
+set foldlevelstart=99
+highlight Folded  ctermfg=cyan ctermbg=black
+nmap <silent> <expr>  zz  FS_ToggleFoldAroundSearch({'context':1})
+
+" Show only sub defns (and maybe comments)...
+let perl_sub_pat = '^\s*\%(sub\|func\|method\|package\)\s\+\k\+'
+let vim_sub_pat  = '^\s*fu\%[nction!]\s\+\k\+'
+augroup FoldSub
+    autocmd!
+    autocmd BufEnter * nmap <silent> <expr>  zp  FS_FoldAroundTarget(perl_sub_pat,{'context':1})
+    autocmd BufEnter * nmap <silent> <expr>  za  FS_FoldAroundTarget(perl_sub_pat.'\zs\\|^\s*#.*',{'context':0, 'folds':'invisible'})
+    autocmd BufEnter *.vim,.vimrc nmap <silent> <expr>  zp  FS_FoldAroundTarget(vim_sub_pat,{'context':1})
+    autocmd BufEnter *.vim,.vimrc nmap <silent> <expr>  za  FS_FoldAroundTarget(vim_sub_pat.'\\|^\s*".*',{'context':0, 'folds':'invisible'})
+    autocmd BufEnter * nmap <silent> <expr>             zv  FS_FoldAroundTarget(vim_sub_pat.'\\|^\s*".*',{'context':0, 'folds':'invisible'})
+augroup END
+
+" mail.ru fix: encoding by project dir
 function ChangeEncoding()
     let current_dir = expand("%:p:h")
 
-    " dictionary: { regexp: encoding }
     let re_patterns = {
-        \ 'some\.project\.name': "cp1251",
-	\ 'another\.project\.regexp': "cp1251",
+		\ 'stat.money.mail.ru': "cp1251",
         \ }
 
     for [ pattern, encoding_name ] in items( re_patterns )
         let match = matchstr( current_dir, pattern )
         if match != ''
-            execute 'e ++enc=' . encoding_name . ' %:p'
+            " set encoding=cp1251
+            " set fileencoding=cp1251
+            execute 'e ++enc=' . encoding_name . ' ++ff=unix %:p'
             " fix: reenable syntax after encoding
             syntax enable
         endif
@@ -270,10 +293,14 @@ function ChangeEncoding()
 endfunction
 
 autocmd BufNewFile,BufReadPost * call ChangeEncoding()
-"---
 
-" syntax hightlighting perfomance
-set nocursorcolumn
-set nocursorline
-set norelativenumber
-syntax sync minlines=256
+set rtp+=/usr/local/opt/fzf
+
+" FZF controls
+nmap ; :Buffers<CR>
+nmap <Leader>p :Files<CR>
+nmap <Leader>t :Tags<CR>
+
+" alt backspace
+imap <A-BS> <C-W>
+
