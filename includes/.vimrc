@@ -271,12 +271,11 @@ augroup FoldSub
     autocmd BufEnter * nmap <silent> <expr>             zv  FS_FoldAroundTarget(vim_sub_pat.'\\|^\s*".*',{'context':0, 'folds':'invisible'})
 augroup END
 
-" mail.ru fix: encoding by project dir
 function ChangeEncoding()
     let current_dir = expand("%:p:h")
 
     let re_patterns = {
-		\ 'stat.money.mail.ru': "cp1251",
+		\ '.stat': "cp1251",
         \ }
 
     for [ pattern, encoding_name ] in items( re_patterns )
