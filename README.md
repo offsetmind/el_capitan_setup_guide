@@ -93,7 +93,7 @@ Change root password (optional):
     
 ### NGINX
 
-    brew install nginx
+    brew install nginx-full --with-perl --with-http2 --with-image-filter --with-mp4 --with-perl --with-webdav --with-lua-module
     # 80 port
     sudo cp /usr/local/opt/nginx/*.plist /Library/LaunchDaemons
     sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
