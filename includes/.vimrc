@@ -6,7 +6,6 @@
 set mouse=a
 set number
 
-" set relativenumber
 syntax on
 
 filetype on
@@ -29,7 +28,6 @@ set guioptions-=L
 
 set nocompatible
 
-" test
 set ttimeout
 set ttimeoutlen=250
 set notimeout
@@ -54,10 +52,6 @@ Plugin 'c9s/perlomni.vim'
 Plugin 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
-" Plugin 'ctrlpvim/ctrlp.vim'
-
-" clang required
-" Plugin 'valloric/youcompleteme'
 Bundle 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'mattn/emmet-vim'
@@ -77,10 +71,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
 
 Plugin 'mtscout6/vim-tagbar-css'
-
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-"
 Plugin 'itchyny/lightline.vim'
 
 
@@ -90,12 +80,12 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'mhartington/oceanic-next'
 Plugin 'altercation/vim-colors-solarized'
 
+Bundle 'farseer90718/vim-taskwarrior'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " other configuration
-
 set tabstop=4
 set shiftwidth=4
 
@@ -115,12 +105,6 @@ set incsearch
 set cursorline
 
 set pumheight=10
-
-set background=dark
-" solarized options 
-" let g:solarized_visibility = "high"
-" let g:solarized_contrast = "high"
-" colorscheme solarized
 
 set background=dark
 colorscheme solarized
@@ -151,7 +135,6 @@ let g:tagbar_type_php = {
 
 nmap <S-x> :TagbarOpenAutoClose<CR>
 nmap <S-m> :NERDTreeTabsToggle<CR>
-" nmap <S-m> :Ex<CR>
 nmap <S-b> :BufExplorer<CR>
 nmap <F1> :tabp<CR>
 nmap <F2> :tabn<CR>
@@ -202,7 +185,6 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" set guifont=/Users/mozg/.vim/fonts
 set guifont=Roboto_Mono_for_Powerline:h14 
 
 " emmet keybindings
@@ -271,11 +253,12 @@ augroup FoldSub
     autocmd BufEnter * nmap <silent> <expr>             zv  FS_FoldAroundTarget(vim_sub_pat.'\\|^\s*".*',{'context':0, 'folds':'invisible'})
 augroup END
 
+" encoding by project dir
 function ChangeEncoding()
     let current_dir = expand("%:p:h")
 
     let re_patterns = {
-		\ '.stat': "cp1251",
+		\ 'directory_regexp': "cp1251",
         \ }
 
     for [ pattern, encoding_name ] in items( re_patterns )
@@ -303,3 +286,5 @@ nmap <Leader>t :Tags<CR>
 " alt backspace
 imap <A-BS> <C-W>
 
+" experimental
+inoremap jk <esc>
